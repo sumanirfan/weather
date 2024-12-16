@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.js">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <header>
+        <nav class="navbar navbar-dark bg-color fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/weathertext-removebg-preview.png" class="logo-nav-name">
+                   </a>
+               
+               <div class="uls-display">
+                <ul class="our-ul nav">
+                   
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">News</a>
+                          </li>
+                      
+                        <li class="nav-item">
+                            <a class="nav-link" href="timezone.html"><span>Time Zone</span><img src="img/time.png"></a>
+                          </li>
+                            
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span>Search</span><img src="img/magnifier.png"></a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link" href="signin.html"><span>Sign in</span><img src="img/user (1).png"></a>
+                        </li>
+                     
+                  </ul>
+               </div>
+             <div class="btn-display">
+                <button class="navbar-toggler tog-color" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-end text-bg-light" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header second-nav-title-bg">
+                      <h5 class="offcanvas-title second-nav-title" id="offcanvasDarkNavbarLabel"><img src="img/weathertext-removebg-preview.png" class="second-nav-title-color"></h5>
+                      <button type="button" class="btn-close btn-close-color" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span>Home</span></a>
+                          </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span>News</span></a>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="timezone.html"><span>Time Zone</span></a>
+                          </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="signin.html"><span>Sign in</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                              <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-warning" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+             </div>
+          </nav>
+    </header>
+
+<main>
+    
+
+      <section class="time-chart">
+        <div>
+            <h2 class="graph-heading" style="font-size:4vw;">WEATHER GRAPH</h2>
+            
+
+            <div id="box">
+                <div id="calendar">
+                  <div id="headerCalendar">
+                    <div class="headItem">
+                      <span class="bigText"><b>WEEKLY REPORT</b></span>
+                      <span class="smallText">10.May - 16.May</span>
+                    </div>
+                    <div class="headItem toRight">
+                      <span class="smallText">Revenue</span>
+                      <span class="bigText"><b>$ 2514.17</b></span>
+                    </div>
+                  </div>
+                  <div class="row" id="legend">
+                    <div class="label">
+                        <div class="mark red"></div>
+                        <span>Views</span>
+                    </div>
+                    <div class="label">
+                        <div class="mark blue"></div>
+                        <span>Purchases</span>
+                    </div>
+                  </div>
+                  <div class="row-graph graph">
+                    <div class="dot mon red"></div>
+                    <div class="dot tue red"></div>
+                    <div class="dot wed red"></div>
+                    <div class="dot thu red"></div>
+                    <div class="dot fri red"></div>
+                    <div class="dot sat red"></div>
+                    <div class="dot sun red"></div>
+
+
+                    <div class="line red" id="linered1"></div>
+                    <div class="line red" id="linered2"></div>
+                    <div class="line red" id="linered3"></div>
+                    <div class="line red" id="linered4"></div>
+                    <div class="line red" id="linered5"></div>
+                    <div class="line red" id="linered6"></div>
+
+                  </div>
+                  <div class="row-graph graph">
+                    <div class="dot mon blue"></div>
+                    <div class="dot tue blue"></div>
+                    <div class="dot wed blue"></div>
+                    <div class="dot thu blue"></div>
+                    <div class="dot fri blue"></div>
+                    <div class="dot sat blue"></div>
+                    <div class="dot sun blue"></div>
+                    <div class="line blue" id="lineblue1"></div>
+                    <div class="line blue" id="lineblue2"></div>
+                    <div class="line blue" id="lineblue3"></div>
+                    <div class="line blue" id="lineblue4"></div>
+                    <div class="line blue" id="lineblue5"></div>
+                    <div class="line blue" id="lineblue6"></div>
+                  </div>
+                  <div id="days">
+                    <span>MON</span>
+                    <span>TUE</span>
+                    <span>WED</span>
+                    <span>THU</span>
+                    <span>FRI</span>
+                    <span>SAT</span>
+                    <span>SUN</span>
+                  </div>
+                </div>
+              </div>
+      
+      
+              <div id="box">
+                  <div id="calendar">
+                    <div id="headerCalendar">
+                      <div class="headItem">
+                        <span class="bigText"><b>MONTHLY REPORT</b></span>
+                        <span class="smallText">10.May - 16.May</span>
+                      </div>
+                      <div class="headItem toRight">
+                        <span class="smallText">Revenue</span>
+                        <span class="bigText"><b>$ 9832.17</b></span>
+                      </div>
+                    </div>
+                    <div class="row" id="legend">
+                      <div class="label">
+                          <div class="mark red"></div>
+                          <span>Views</span>
+                      </div>
+                      <div class="label">
+                          <div class="mark blue"></div>
+                          <span>Purchases</span>
+                      </div>
+                    </div>
+                    <div class="row-graph graph">
+                      <div class="dot mon red"></div>
+                      <div class="dot tue red"></div>
+                      <div class="dot wed red"></div>
+                      <div class="dot thu red"></div>
+                      <div class="dot fri red"></div>
+                      <div class="dot sat red"></div>
+                      <div class="dot sun red"></div>
+                      <div class="line red" id="linered1"></div>
+                      <div class="line red" id="linered2"></div>
+                      <div class="line red" id="linered3"></div>
+                      <div class="line red" id="linered4"></div>
+                      <div class="line red" id="linered5"></div>
+                      <div class="line red" id="linered6"></div>
+                    </div>
+                    <div class="row-graph graph">
+                      <div class="dot mon blue"></div>
+                      <div class="dot tue blue"></div>
+                      <div class="dot wed blue"></div>
+                      <div class="dot thu blue"></div>
+                      <div class="dot fri blue"></div>
+                      <div class="dot sat blue"></div>
+                      <div class="dot sun blue"></div>
+                      <div class="line blue" id="lineblue1"></div>
+                      <div class="line blue" id="lineblue2"></div>
+                      <div class="line blue" id="lineblue3"></div>
+                      <div class="line blue" id="lineblue4"></div>
+                      <div class="line blue" id="lineblue5"></div>
+                      <div class="line blue" id="lineblue6"></div>
+                    </div>
+                    <div id="days">
+                      <span>MON</span>
+                      <span>TUE</span>
+                      <span>WED</span>
+                      <span>THU</span>
+                      <span>FRI</span>
+                      <span>SAT</span>
+                      <span>SUN</span>
+                    </div>
+                  </div>
+                </div>
+
+        </div>
+
+
+
+
+
+
+
+        
+
+      <div class="main-container">
+		<div class="year-stats">
+			<div class="month-group">
+				<div class="bar h-100"></div>
+				<p class="month">Jan</p>
+			</div>
+			<div class="month-group">
+				<div class="bar h-50"></div>
+				<p class="month">Feb</p>
+			</div>
+			<div class="month-group">
+				<div class="bar h-75"></div>
+				<p class="month">Mar</p>
+			</div>
+			<div class="month-group">
+				<div class="bar h-25"></div>
+				<p class="month">Apr</p>
+			</div>
+			<div class="month-group selected">
+				<div class="bar h-100"></div>
+				<p class="month">May</p>
+			</div>
+			<div class="month-group">
+				<div class="bar h-50"></div>
+				<p class="month">Jun</p>
+			</div>
+			<div class="month-group">
+				<div class="bar h-75"></div>
+				<p class="month">Jul</p>
+			</div>
+			<div class="month-group">
+				<div class="bar h-25"></div>
+				<p class="month">Aug</p>
+			</div>
+			<div class="month-group">
+				<div class="bar h-50"></div>
+				<p class="month">Sep</p>
+			</div>
+			<div class="month-group">
+				<div class="bar h-75"></div>
+				<p class="month">Oct</p>
+			</div>
+			<div class="month-group">
+				<div class="bar h-25"></div>
+				<p class="month">Nov</p>
+			</div>
+			<div class="month-group">
+				<div class="bar h-100"></div>
+				<p class="month">Dez</p>
+			</div>
+		</div>
+
+		<div class="stats-info">
+			<div class="graph-container">
+				<div class="percent">
+					<svg viewBox="0 0 36 36" class="circular-chart">
+						<path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+      a 15.9155 15.9155 0 0 1 0 31.831
+      a 15.9155 15.9155 0 0 1 0 -31.831" />
+						<path class="circle" stroke-dasharray="85, 100" d="M18 2.0845
+      a 15.9155 15.9155 0 0 1 0 31.831
+      a 15.9155 15.9155 0 0 1 0 -31.831" />
+						<path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
+      a 15.9155 15.9155 0 0 1 0 31.831
+      a 15.9155 15.9155 0 0 1 0 -31.831" />
+						<path class="circle" stroke-dasharray="30, 100" d="M18 2.0845
+      a 15.9155 15.9155 0 0 1 0 31.831
+      a 15.9155 15.9155 0 0 1 0 -31.831" />
+					</svg>
+				</div>
+				<p>Total: $2075</p>
+			</div>
+
+			<div class="info">
+				<p>Most expensive category <br /><span>Restaurants & Dining</span></p>
+				<p>Updated categories <span>2</span></p>
+				<p>Bonus payments <span>$92</span></p>
+			</div>
+		</div>
+	</div>
+        
+
+
+      </section>
+
+
+
+
+      
+<footer class="fotter">
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social_icon">
+      <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+    
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <p>&copy2021 Prakash Sahu | All Rights Reserved</p>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </footer>
+
+
+
+
+
+    
+</main>
+  </body>
+</html>
